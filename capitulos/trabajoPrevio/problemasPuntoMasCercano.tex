@@ -47,7 +47,16 @@ Se dará introducción a una estructura geometrica que puede ser creada en tiemp
 
 \subparagraph{Diagrama de Voronoi}
 Dados $N$ puntos en el plano, $p_i \in \mathbb{R} $ para $i=1,2,...,N$, para cada $p_i$ existe un polígono convexo $V_i$ llamado polígono de Voronoi asociado a $p_i$ que tiene la propiedad de que $p_i$ es el punto más cercano $\forall x \in V_i$. \\
-Si $h(i,j)$ denoata el semiplano que contiene a $p_i$ definido por el bisector perpendicular entre $p_i$ y $p_j$, entonces $V_i = \cup h(i,j)$, lo cual demuestra que $V_i$ es un polígono convexo teniendo a lo más $N\-1$ lados.
+Si $h(i,j)$ denoata el semiplano que contiene a $p_i$ definido por el bisector perpendicular entre $p_i$ y $p_j$, entonces $V_i = \cap h(i,j)$, lo cual demuestra que $V_i$ es un polígono convexo teniendo a lo más $N\-1$ lados.\\
+Los polígonos de Voronoi particionan el plano, y forman una red a la cual nos referiremos como diagrama de Voronoi.
+
+\begin{theorem}
+El diagrama de Voronoi de $N$ puntos en el plano euclideano puede construirse en tiempo $O(N \log N)$.
+\end{theorem}
+\begin{proof}
+Supóngase que el conjunto de $S$ de $N$ puntos es dividido en dos conjuntos, $L$ y $R$, cada uno conteniendo $N/2$ puntos, tal que cada punto de $L$ está a la izquierda de los punts de R. Asumiendo que tenemos el diagrama de Voronoi de $R$ y $L$. Entonces podemos unir ambos diagramas para formar uno solo que representa en diagrama de Voronoi de $S$, y dicha unión toma tiempo $O(N)$.
+\end{proof}
+
 
 
 
