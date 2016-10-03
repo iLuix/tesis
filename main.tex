@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {imagenes/} }
+
+%\documentclass[10pt,a4paper]{article}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\setmainfont{???}
+%\usepackage{polyglossia}
+%\setdefaultlanguage{spanish}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+ 
+
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\author{Luis Bravo}
+\title{
+	{Algoritmo de exploración para multiples agentes}\\
+	{\large Universidad de Guanajuato}\\
+	{\includegraphics{escudo.png}}
+}
+\author{Luis Bravo}
+\date{XX XXXXXXX 2017}
+
+
+
+
+
+\begin{document} 
+\maketitle
+
+
+%\chapter*{Abstracto}
+%Abstract goes here
+
+%\chapter*{Dedicación}
+%To mum and dad
+
+%\chapter*{Declaration}
+%I declare that..
+
+%\chapter*{Acknowledgements}
+%I want to thank...
+
+
+
+\chapter{Introducción}
+\input{capitulos/introduccion}
+
+\chapter{Trabajo Previo}
+\section{Problemas de punto más cercano}
+\input{capitulos/trabajoPrevio/problemasPuntoMasCercano}
+\tableofcontents
+
+
+%\appendix
+%\chapter{Appendix Title}
+%\input{chapters/apendice}
+
+
+\end{document}

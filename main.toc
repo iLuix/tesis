@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
+\contentsline {chapter}{\numberline {2}Trabajo Previo}{2}
+\contentsline {section}{\numberline {2.1}Problemas de punto m\IeC {\'a}s cercano}{2}
+\contentsline {subsection}{\numberline {2.1.1}Introduccion}{2}
+\contentsline {subsection}{\numberline {2.1.2}Problema de vecino m\IeC {\'a}s cercano}{2}
+\contentsline {subsection}{\numberline {2.1.3}\IeC {\'A}rbol de expansi\IeC {\'o}n m\IeC {\'\i }nima en el plano}{2}
+\contentsline {subsection}{\numberline {2.1.4}Triangulaci\IeC {\'o}n}{3}
+\contentsline {subsection}{\numberline {2.1.5}Envolvente convexa}{3}
+\contentsline {subsection}{\numberline {2.1.6}C\IeC {\'\i }rculo vac\IeC {\'\i }o m\IeC {\'a}s grande}{3}
+\contentsline {subsection}{\numberline {2.1.7}$K$ puntos m\IeC {\'a}s cercanos}{3}
+\contentsline {subsection}{\numberline {2.1.8}C\IeC {\'\i }rculo m\IeC {\'a}s peque\IeC {\~n}o que encierra a todos los puntos}{3}
+\contentsline {subsection}{\numberline {2.1.9}Resumen de los problemas}{4}
+\contentsline {subparagraph}{Diagrama de Voronoi}{4}

@@ -1,0 +1,71 @@
+\subsection{Introduccion}
+Una selección de problemas que parecen no relacionados que involuctan un conjunto de $n$ puntos en el plano son estudiados. Para ellos las cotas conocidas eran $O(N^2)$ o peor. \\
+El propósito es introducit una únca estructura gemométrica llamada Diagrama de Voronoi, la cual puede ser construida rapidamente y que contiene informacion relevante de proximidad en espacio lineal. Los diagramas de Voronoi es usado para obterner algoritmos de complejidad $O(N \log N)$ para todos los problemas.
+\subsection{Problema de vecino más cercano}
+Dado un conjunto de $N$ puntos en el plano euclideo, encontrar el punto más cercano a cada punto. \\
+Un algoritmo de fuerza bruta nos dá una cota de complejidad de $O(N^2)$ checando a pares.
+
+\begin{theorem}
+%\label{teo}
+$O(N \log N)$ es la cota inferior en tiempo requerido para determinar el punto más cercano de los $N$ puntos.
+\end{theorem}
+
+\subsection{Árbol de expansión mínima en el plano}
+Dados $N$ puntos en el plano, encontrar el árbol de conexiones de distancia mínica entre los puntos cuyos vértices son líneas que unen los putos.
+
+\begin{theorem}
+$O(N \log N)$ en la cota inferior de tiempo requerido para determinar el árbol de expansión mínima.
+\end{theorem}
+
+\subsection{Triangulación}
+Dados $N$ puntos en el plano, unirlos a todos por segmentos de línea que no se intersectan de tal manera que toda región dentro de la envolvente convexa es un triángulo. En partucular, encontrar las triangulación cuta suma de aristas es mínima.
+
+\begin{theorem}
+$O(N \log N)$ es la cota inferior de tiempo requerido para calcular la triangulación de $N$ puntos.
+\end{theorem}
+
+\subsection{Envolvente convexa}
+Dado un conjunto de $N$ puntos en el plano, encontrar su envolvente convexa.
+
+\begin{theorem}
+$O(N \log N)$ es la cota inferior en tiempo requerido para encontrar la envolvente convexa de un conjunto de puntos en el plano.
+\end{theorem}
+
+\subsection{Círculo vacío más grande}
+Dado un conjunto de $N$ puntos en el plano, encontrar el círculo más grande que no contiene puntos del conjunto y cuyo centro está en el interior de la envolvente convexa
+
+\subsection{$K$ puntos más cercanos}
+Dado un conjunto de $N$ puntos en el plano, con preprocesamiento permitido, encontrar los $k$ puntos más cercanos a un nuevo punto $x$.
+
+\subsection{Círculo más pequeño que encierra a todos los puntos}
+Dado un conjunto de $N$ puntos en el plano, encontrar el círculo más pequeño que cubre a todos los puntos del conjunto.
+
+\subsection{Resumen de los problemas}
+Los problemas propuestos arriba, están relacionados en el sentido de que tratan con distancias entre putnos de un conjunto finito. Sin embargo, los algoritmos propuestos para resolverlos no están ni siquiera relacionados. \\
+Se dará introducción a una estructura geometrica que puede ser creada en tiempo $O(N \log N)$ y permite algoritmos óptimos para solucionar los problemas de punto más cercano.
+
+
+\subparagraph{Diagrama de Voronoi}
+Dados $N$ puntos en el plano, $p_i \in \mathbb{R} $ para $i=1,2,...,N$, para cada $p_i$ existe un polígono convexo $V_i$ llamado polígono de Voronoi asociado a $p_i$ que tiene la propiedad de que $p_i$ es el punto más cercano $\forall x \in V_i$. \\
+Si $h(i,j)$ denoata el semiplano que contiene a $p_i$ definido por el bisector perpendicular entre $p_i$ y $p_j$, entonces $V_i = \cup h(i,j)$, lo cual demuestra que $V_i$ es un polígono convexo teniendo a lo más $N\-1$ lados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
