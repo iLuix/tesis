@@ -1,6 +1,22 @@
-\subsection{Introduccion}
-Una selección de problemas que parecen no relacionados que involuctan un conjunto de $n$ puntos en el plano son estudiados. Para ellos las cotas conocidas eran $O(N^2)$ o peor. \\
-El propósito es introducit una únca estructura gemométrica llamada Diagrama de Voronoi, la cual puede ser construida rapidamente y que contiene informacion relevante de proximidad en espacio lineal. Los diagramas de Voronoi es usado para obterner algoritmos de complejidad $O(N \log N)$ para todos los problemas.
+\subsection{Introducción}
+Una selección de problemas que parecen no relacionados que involuctan un conjunto de $N$ puntos en el plano son estudiados. Para ellos las cotas conocidas eran $O(N^2)$ o peores. \\
+El propósito es introducir una única estructura geométrica llamada Diagrama de Voronoi, la cual puede ser construida rapidamente y que contiene información relevante de proximidad en espacio lineal. El Diagrama de Voronoi es usado para obterner algoritmos de complejidad $O(N \log N)$ para todos los problemas.
+
+\subsection{Diagrama de Voronoi}
+Dados $N$ puntos en el plano, $p_i \in \mathbb{R} ^2 $ para $i=1,2,...,N$, para cada $p_i$ existe un polígono convexo $V_i$ llamado polígono de Voronoi asociado a $p_i$ que tiene la propiedad de que $ || p_i - x || \leq || p_j - x|| \forall x \in V_i$. \\
+Si $h(i,j)$ denoata el semiplano que contiene a $p_i$ definido por el bisector perpendicular entre $p_i$ y $p_j$, entonces $V_i = \cap h(i,j)$, lo cual demuestra que $V_i$ es un polígono convexo teniendo a lo más $N-1$ lados.\\
+Los polígonos de Voronoi particionan el plano, y forman una red a la cual nos referiremos como diagrama de Voronoi.
+
+\begin{theorem}
+El diagrama de Voronoi de $N$ puntos en el plano euclideano puede construirse en tiempo $O(N \log N)$.
+\end{theorem}
+
+\begin{proof}
+Supóngase que el conjunto de $S$ de $N$ puntos es dividido en dos conjuntos, $L$ y $R$, cada uno conteniendo $N/2$ puntos, tal que cada punto de $L$ está a la izquierda de los puntos de R. Asumiendo que tenemos el diagrama de Voronoi de $R$ y $L$. Entonces podemos unir ambos diagramas para formar uno solo que representa en diagrama de Voronoi de $S$. Dicha unión toma tiempo $O(N)$. ya que podemos formar una línea $P$ tal que cualquier punto a la izquierda de él es más cercano al conjunto $L$.  Nótese que $P$ es monótona respeccto al eje $y$, pues cada linea horizontal toca a $P$ exactamente una vez. Usando el hecho de que $P$ es monótona respecto al eje $y$, podemos deducir que intersecta a dos regiones $V_i$ y $V_j$ con $i\in L$ y $j \in R$. Dado este hecho, de puede seguir la construcción de los demás segmentos que forman $P$, pues serán vecinos de $i$ y de $j$. Ya que este proceso toma tiempo lineal en el peor de los casos, es claro que el algoritmo para construir el diagrama de Voronoi toma complejidad $O(N \log N)$
+\end{proof}
+
+
+
 \subsection{Problema de vecino más cercano}
 Dado un conjunto de $N$ puntos en el plano euclideo, encontrar el punto más cercano a cada punto. \\
 Un algoritmo de fuerza bruta nos dá una cota de complejidad de $O(N^2)$ checando a pares.
@@ -45,17 +61,7 @@ Los problemas propuestos arriba, están relacionados en el sentido de que tratan
 Se dará introducción a una estructura geometrica que puede ser creada en tiempo $O(N \log N)$ y permite algoritmos óptimos para solucionar los problemas de punto más cercano.
 
 
-\subparagraph{Diagrama de Voronoi}
-Dados $N$ puntos en el plano, $p_i \in \mathbb{R} $ para $i=1,2,...,N$, para cada $p_i$ existe un polígono convexo $V_i$ llamado polígono de Voronoi asociado a $p_i$ que tiene la propiedad de que $p_i$ es el punto más cercano $\forall x \in V_i$. \\
-Si $h(i,j)$ denoata el semiplano que contiene a $p_i$ definido por el bisector perpendicular entre $p_i$ y $p_j$, entonces $V_i = \cap h(i,j)$, lo cual demuestra que $V_i$ es un polígono convexo teniendo a lo más $N\-1$ lados.\\
-Los polígonos de Voronoi particionan el plano, y forman una red a la cual nos referiremos como diagrama de Voronoi.
 
-\begin{theorem}
-El diagrama de Voronoi de $N$ puntos en el plano euclideano puede construirse en tiempo $O(N \log N)$.
-\end{theorem}
-\begin{proof}
-Supóngase que el conjunto de $S$ de $N$ puntos es dividido en dos conjuntos, $L$ y $R$, cada uno conteniendo $N/2$ puntos, tal que cada punto de $L$ está a la izquierda de los punts de R. Asumiendo que tenemos el diagrama de Voronoi de $R$ y $L$. Entonces podemos unir ambos diagramas para formar uno solo que representa en diagrama de Voronoi de $S$, y dicha unión toma tiempo $O(N)$.
-\end{proof}
 
 
 
